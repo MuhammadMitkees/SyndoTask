@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DarkModeContainer from "../../Components/DarkModeContainer/darkModeContainer";
 import { CompanyDetailsStyle } from "./CompanyDetailsStyle";
 import AuthenticationIcon from "../../images/CompanyDetails/Authenticated.png";
@@ -13,6 +13,7 @@ import HeaderNavigationIcons from "../../Components/CompanyDetailsComponents/Hea
 import ApplicationFormModal from "../../Components/CompanyDetailsComponents/ApplicationFromModal/ApplicationFormModal";
 import { useDispatch, useSelector } from "react-redux";
 import teldaIcon from "../../images/Cards/Telda-logo.png";
+import { showApplicationModal } from "../../Redux/DarkModeReducer";
 
 function CompanyDetails() {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ function CompanyDetails() {
                       <img src={teldaIcon} />
                     </div>
                     <div>
-                      <h2>Trella</h2>
+                      <h2>Telda</h2>
                       <p>LIVE</p>
                     </div>
                     <img
@@ -42,7 +43,13 @@ function CompanyDetails() {
                       src={AuthenticationIcon}
                     />
                   </div>
-                  <button>Apply</button>
+                  <button
+                    onClick={() => {
+                      dispatch(showApplicationModal());
+                    }}
+                  >
+                    Apply
+                  </button>
                 </div>
                 <div className="CardHeaderCompanyDetails">
                   <CompanyDetailsCard isApplicationform={false} />

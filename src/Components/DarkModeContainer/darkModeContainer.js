@@ -6,7 +6,6 @@ import { Switch } from "@mui/material";
 function DarkModeContainer() {
   const { isDark: isDark } = useSelector((state) => state);
   const dispatch = useDispatch();
-
   return (
     <DarkModeContainerStyling>
       <div className="mainContainer">

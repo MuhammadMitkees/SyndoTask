@@ -17,5 +17,6 @@ export const darkModeSlice = createSlice({
     },
   },
 });
-export const { toogleDarkMode } = darkModeSlice.actions;
+export const { toogleDarkMode, showApplicationModal, hideApplicationModal } =
+  darkModeSlice.actions;
 export default darkModeSlice.reducer;

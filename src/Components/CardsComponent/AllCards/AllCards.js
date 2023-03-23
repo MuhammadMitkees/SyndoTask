@@ -15,15 +15,17 @@ function AllCards() {
 
   return (
     <AllCardsStyle>
-      <Card
-        src={teldaLogo}
-        companyTitle="Telda"
-        classification="PRE-SEED"
-        onClick={handleClick}
-        haveBG
-        tagOne="FINTECH"
-        tagTwo="EQUITY"
-      />
+      <Link to="/CompanyDetails">
+        <Card
+          src={teldaLogo}
+          companyTitle="Telda"
+          classification="PRE-SEED"
+          onClick={handleClick}
+          haveBG
+          tagOne="FINTECH"
+          tagTwo="EQUITY"
+        />
+      </Link>
       <Card
         src={trellaLogo}
         haveBG

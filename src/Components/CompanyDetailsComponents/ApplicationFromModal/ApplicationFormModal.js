@@ -8,11 +8,16 @@ import CompanyDetailsCard from "../../CompanyDetailsCard/CompanydetalisCard";
 import closeIcon from "../../../images/CompanyDetails/closeIcon.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { hideApplicationModal } from "../../../Redux/DarkModeReducer";
+
 import * as yup from "yup";
+import { useDispatch } from "react-redux";
 function ApplicationFormModal() {
   const [sliderValue, setSliderValue] = useState(0);
   const [isNameInput, setIsNameInput] = useState(true);
   const [isCreditCard, setIsCreditCard] = useState(false);
+  const dispatch = useDispatch();
+
   const handleSliderChange = (e, newValue) => {
     setSliderValue(newValue);
   };
@@ -220,7 +225,12 @@ function ApplicationFormModal() {
         </div>
       </div>
 
-      <button className="closeIconModal">
+      <button
+        onClick={() => {
+          dispatch(hideApplicationModal());
+        }}
+        className="closeIconModal"
+      >
         <img src={closeIcon} />
       </button>
     </ApplicationFormModalStyle>
