@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import DarkModeContainer from "../../Components/DarkModeContainer/darkModeContainer";
 import { CompanyDetailsStyle } from "./CompanyDetailsStyle";
 import AuthenticationIcon from "../../images/CompanyDetails/Authenticated.png";
-import trellaIcon from "../../images/Cards/trella-logo.png";
 import CompanyDetailsCard from "../../Components/CompanyDetailsCard/CompanydetalisCard";
 import { Link } from "react-router-dom";
 import ShareIcon from "../../images/CompanyDetails/shareIcon.png";
@@ -12,12 +11,15 @@ import linkedinIcon from "../../images/CompanyDetails/linkedinIcon.png";
 import AboutCompany from "../../Components/CompanyDetailsComponents/AboutCompany/AboutCompany";
 import HeaderNavigationIcons from "../../Components/CompanyDetailsComponents/HeaderNavigationIcons/HeaderNavigationIcons";
 import ApplicationFormModal from "../../Components/CompanyDetailsComponents/ApplicationFromModal/ApplicationFormModal";
+import { useDispatch, useSelector } from "react-redux";
+import teldaIcon from "../../images/Cards/Telda-logo.png";
 
 function CompanyDetails() {
-  const [showModal, setShowModal] = useState(true);
+  const dispatch = useDispatch();
+  const { isModalVisible: isModalVisible } = useSelector((state) => state);
   return (
     <CompanyDetailsStyle>
-      {showModal ? (
+      {isModalVisible ? (
         <ApplicationFormModal />
       ) : (
         <>
@@ -29,7 +31,7 @@ function CompanyDetails() {
                 <div className="logoAndApply">
                   <div className="FirstDivLogoAndApply">
                     <div className="logoAndApplyLogo">
-                      <img src={trellaIcon} />
+                      <img src={teldaIcon} />
                     </div>
                     <div>
                       <h2>Trella</h2>

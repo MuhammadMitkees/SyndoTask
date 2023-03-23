@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const NavbarStyle = styled.div`
   padding: 67px 10px;
   /* position: fixed; */
-  width: 1650px;
+  /* width: 100%; */
+  max-width: 1250px;
   margin: auto;
 
   h1 {
@@ -16,7 +17,7 @@ export const NavbarStyle = styled.div`
     width: 100%;
   }
   .imageLogoLink {
-    width: 180px;
+    width: 120px;
   }
   .navbarContainer {
     display: flex;
@@ -32,11 +33,10 @@ export const NavbarStyle = styled.div`
     width: 30%;
   }
   .navbarContainerItem:nth-child(2) a:nth-child(2) {
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-right: 100px;
+    margin-left: 100px;
   }
-  .navbarContainerItem:nth-child(2) {
-  }
+
   .navbarContainerItem:last-child {
     display: flex;
     justify-content: flex-end;

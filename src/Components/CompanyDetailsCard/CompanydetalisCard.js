@@ -6,7 +6,7 @@ import { ComanyDetailsCardStyle } from "./CompanyDetailsCardStyle";
 function CompanyDetailsCard(props) {
   return (
     <ComanyDetailsCardStyle
-      style={props.isApplicationform ? { width: "400px" } : { width: "515px" }}
+      style={props.isApplicationform ? { width: "20vw" } : { width: "28vw" }}
     >
       <div className="cardBackGroundDiv">
         <div className="cardBgLogoContainer">

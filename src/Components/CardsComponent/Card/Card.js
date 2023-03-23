@@ -1,9 +1,8 @@
 import React from "react";
 import CardFooter from "./CardFooter/CardFooter";
 import { CardStyle } from "./CardStyle";
-import teldaLogo from "../../../images/Cards/Telda-logo.png";
 
-function Card() {
+function Card(props) {
   return (
     <CardStyle>
       <div className="cardBackGroundDiv">
@@ -12,22 +11,22 @@ function Card() {
           <p>LIVE</p>
         </div>
         <div className="cardBgLogoContainer">
-          <img src={teldaLogo} />
+          <img src={props.src} />
         </div>
         <div className="cardBgClassificationContainer">
-          <p>PRE-SEED</p>
+          <p>{props.classification}</p>
         </div>
       </div>
 
       <div className="companyDetailsDiv">
-        <h3>Telda</h3>
+        <h3>{props.companyTitle}</h3>
         <p>
           Syndo derived from syndication and is here to bridge the gap between
           Business Owners and Investors.
         </p>
         <ul>
-          <li>FINTECH</li>
-          <li>EQUITY</li>
+          <li>{props.tagOne}</li>
+          <li>{props.tagTwo}</li>
         </ul>
       </div>
       <CardFooter />

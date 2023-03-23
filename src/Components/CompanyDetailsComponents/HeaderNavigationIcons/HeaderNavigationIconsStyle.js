@@ -11,19 +11,21 @@ export const HeaderNavigationIconsStyle = styled.div`
     border: none;
     cursor: pointer;
     margin-left: 15px;
+    width: 3vw;
+  }
+  .HeaderIconsDiv button img {
+    width: 1.5vw;
   }
   .notificationBox {
     position: absolute;
     top: 60px;
     right: 0;
-    /* height: 390px; */
-
-    width: 480px;
+    width: 25vw;
     padding-left: 60px;
     padding-right: 70px;
     padding-bottom: 20px;
     background-color: #141618;
-    z-index: 2;
+    z-index: 200;
     border-radius: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }

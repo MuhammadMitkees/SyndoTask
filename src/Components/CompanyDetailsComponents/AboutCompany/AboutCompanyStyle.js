@@ -13,7 +13,7 @@ export const AboutCompanyStyle = styled.div`
     margin-bottom: 0;
   }
   .titledivAboutCompany {
-    width: 960px;
+    width: 40vw;
     border-bottom: 1px solid #acb8c2;
     display: flex;
   }
@@ -22,7 +22,7 @@ export const AboutCompanyStyle = styled.div`
   .currentRoundSelected,
   .currentRoundNotSelected {
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
     padding-bottom: 25px;
     transition: 0.5s ease-in-out;
   }
@@ -43,14 +43,14 @@ export const AboutCompanyStyle = styled.div`
     cursor: pointer;
   }
   .txtDivFirstDivAboutcomp {
-    width: 960px;
+    width: 50vw;
     padding-bottom: 65px;
     padding-top: 50px;
     border-bottom: 1px solid #acb8c2;
   }
   .txtDivFirstDivAboutcomp > p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #acb8c2;
   }
   .titleDivTxtDiv {
@@ -61,7 +61,7 @@ export const AboutCompanyStyle = styled.div`
   .meetTheTeamDiv h3,
   .pitchDeckContainer h3 {
     font-weight: 900;
-    font-size: 24px;
+    font-size: 18px;
     color: #ffffff;
   }
   .meetTheTeamDiv,
@@ -70,11 +70,11 @@ export const AboutCompanyStyle = styled.div`
   }
   .titleDivTxtDiv p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #acb8c2;
   }
   .titleDivTxtDiv div:nth-child(n + 2) {
-    margin-left: 240px;
+    margin-left: 10vw;
   }
   .MeetTheTeamCard,
   .MeetTheTeamCards {
@@ -84,7 +84,7 @@ export const AboutCompanyStyle = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 110px;
+    margin-right: 5vw;
   }
   .MeetTheTeamCards {
     justify-content: flex-start;
@@ -92,24 +92,25 @@ export const AboutCompanyStyle = styled.div`
   }
   .MeetTheTeamCard h4 {
     font-weight: 900;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
     margin-top: 30px;
   }
   .MeetTheTeamCard p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff;
   }
   .pitchDeckContainer img {
     margin-top: 25px;
+    width: 50vw;
   }
   .secDivAboutCompany {
-    width: 480px;
+    width: 18vw;
   }
   .secDivAboutCompany > h3 {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
     padding-bottom: 30px;
     margin-bottom: 35px;
@@ -123,7 +124,7 @@ export const AboutCompanyStyle = styled.div`
   .secDivAboutCompanyRow h3 {
     width: 100%;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
   }
   .secDivAboutCompanyRow div {
@@ -133,11 +134,11 @@ export const AboutCompanyStyle = styled.div`
   }
   .secDivAboutCompanyRow div p {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 16px;
     color: #acb8c2;
   }
   .secDivAboutCompanyRow div img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 `;

@@ -1,6 +1,7 @@
 import React from "react";
 import { DoersCardStyle } from "./DoersCardStyle";
 import Person1 from "../../../images/Cards/person1-2x.png";
+import chap from "../../../images/CompanyDetails/”.png";
 
 function DoersCard() {
   return (
@@ -13,7 +14,7 @@ function DoersCard() {
             <p>Company XYZ - CEO</p>
           </div>
         </div>
-        <p className="quoteDoersCard">”</p>
+        <img src={chap} />
       </div>
       <p className="mainTxtDoersCard">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod

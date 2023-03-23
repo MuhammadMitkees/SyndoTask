@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardFooterStyle = styled.div`
-  width: 450px;
+  width: 90%;
   margin: auto;
   padding-bottom: 31px;
   padding-top: 31px;
@@ -23,7 +23,7 @@ export const CardFooterStyle = styled.div`
   }
   p {
     color: #656f77;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
   }
   .cardFoooterLink {

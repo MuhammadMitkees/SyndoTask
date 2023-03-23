@@ -10,9 +10,14 @@ export const DarkModeContainerStyling = styled.div`
     max-width: 1200px;
   }
   .mainContainer {
-    max-width: 1550px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: flex-end;
+  }
+  .switchLabel {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
   }
 `;

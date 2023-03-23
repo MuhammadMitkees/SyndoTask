@@ -7,11 +7,11 @@ export const NumbersCardStyle = styled.div`
     rgba(196, 196, 196, 0) 100%
   );
   /* height: 240px; */
-  width: 280px;
+  width: 18%;
   border-radius: 20px;
   padding: 45px 30px 50px 30px;
   p:first-child {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
@@ -21,7 +21,7 @@ export const NumbersCardStyle = styled.div`
   }
   p:last-child {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
   }
 `;

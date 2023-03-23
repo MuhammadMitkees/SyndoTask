@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import BGimage from "../../../images/Cards/BackgroundImage.png";
 export const CardStyle = styled.div`
-  height: 560px;
-  width: 515px;
+  width: 30%;
   background-color: #ffffff;
   border-radius: 8px;
   .cardBackGroundDiv {
-    height: 260px;
+    height: 200px;
     background-image: url(${BGimage});
     background-position: center;
     background-size: cover;
@@ -14,19 +13,19 @@ export const CardStyle = styled.div`
     position: relative;
   }
   .companyDetailsDiv {
-    width: 450px;
-    padding-top: 25px;
-    padding-bottom: 31px;
+    width: 95%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: auto;
     border-bottom: 1px solid #cdd9e3;
   }
   .companyDetailsDiv p {
     color: #656f77;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
   }
   h3 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 900;
   }
   ul {
@@ -53,15 +52,15 @@ export const CardStyle = styled.div`
 
   .cardBgLiveContainer p {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 900;
     margin-left: 5px;
   }
   .cardBgLiveContainer span {
     content: "  ";
     background-color: #ffffff;
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
     border-radius: 50%;
   }
   .cardBgLiveContainer,
@@ -74,35 +73,33 @@ export const CardStyle = styled.div`
     border-radius: 8px;
   }
   .cardBgLiveContainer {
-    width: 180px;
+    width: 6vw;
     background-color: #7dd752;
-    height: 30px;
+    height: 1.5vw;
 
-    left: 31px;
+    left: 10px;
     top: 25px;
   }
   .cardBgLogoContainer {
     background-color: #ffffff;
-    height: 96px;
-    width: 96px;
-    left: 31px;
+    height: 5vw;
+    width: 5vw;
+    left: 10px;
     bottom: 24px;
   }
   .cardBgClassificationContainer {
-    width: 180px;
-    height: 30px;
+    width: 10vw;
+    height: 2vw;
     background-color: #cdd9e3;
-    right: 29px;
+    right: 10px;
     bottom: 24px;
   }
   .cardBgClassificationContainer p {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 900;
     color: #656f77;
   }
   .cardBgLessDiv {
     height: 150px;
-  }
-  .cardBgLessLogoContainer {
   }
 `;

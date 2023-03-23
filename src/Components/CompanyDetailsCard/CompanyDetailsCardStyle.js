@@ -6,7 +6,7 @@ export const ComanyDetailsCardStyle = styled.div`
     position: relative;
   }
   .companyDetailsDiv {
-    width: 450px;
+    width: 20vw;
     padding-top: 25px;
     padding-bottom: 31px;
     margin: auto;
@@ -67,7 +67,7 @@ export const ComanyDetailsCardStyle = styled.div`
     border-radius: 8px;
   }
   .cardBgLiveContainer {
-    width: 180px;
+    width: 20vw;
     background-color: #7dd752;
     height: 30px;
 
@@ -95,8 +95,6 @@ export const ComanyDetailsCardStyle = styled.div`
   }
   .cardBgLessDiv {
     height: 150px;
-  }
-  .cardBgLessLogoContainer {
   }
   .carFooterContainer,
   .companyDetailsDivContainer {

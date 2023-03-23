@@ -2,24 +2,32 @@ import styled from "styled-components";
 
 export const ApplicationFormModalStyle = styled.div`
   padding: 100px 0 100px 50px;
-  width: 100%;
   height: 100%;
   z-index: 100;
   background: #000000;
   .mainDiv {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
   }
   .modalIconsDiv {
     display: flex;
     flex-direction: column;
-    width: 60px;
+    width: 3%;
+  }
+  .briefCaseIconSelected,
+  .paymentIconSelected,
+  .briefCaseIcon,
+  .paymentIcon {
+    font-size: 40px;
   }
   .briefCaseIcon,
   .paymentIcon {
     color: #acb8c2;
-    font-size: 40px;
+  }
+  .briefCaseIconSelected,
+  .paymentIconSelected {
+    color: #00acb1;
   }
   .briefCaseIconDiv p,
   .paymentIconDiv p {
@@ -40,8 +48,8 @@ export const ApplicationFormModalStyle = styled.div`
     text-align: center;
   }
   .applicationFormDiv {
+    width: 25%;
     margin-left: 90px;
-    width: 470px;
   }
   .applicationFormDiv > h3 {
     font-weight: 900;
@@ -58,7 +66,10 @@ export const ApplicationFormModalStyle = styled.div`
     display: block;
     margin-bottom: 20px;
   }
-
+  .inputAndError {
+    position: relative;
+    margin-bottom: 65px;
+  }
   .firstNameInput {
     background-color: transparent;
     border: none;
@@ -68,7 +79,22 @@ export const ApplicationFormModalStyle = styled.div`
     color: #656f77;
     font-weight: 400;
     font-size: 16px;
-    margin-bottom: 65px;
+  }
+  .firstNameInputError {
+    border-bottom: 2px solid red;
+  }
+  .firstnameError,
+  .checkboxError,
+  .creditErrorMsg {
+    color: red;
+    font-weight: 400;
+    font-size: 16px;
+    position: absolute;
+    top: 30px;
+  }
+  .checkBoxAndError,
+  .creditInputAndError {
+    position: relative;
   }
   .sliderLabelDiv p {
     font-weight: 400;
@@ -98,6 +124,7 @@ export const ApplicationFormModalStyle = styled.div`
   }
   .termsTxt {
     display: inline-block;
+    margin-bottom: 50px;
   }
   .inputCheckbox {
     width: 30px;
@@ -112,7 +139,7 @@ export const ApplicationFormModalStyle = styled.div`
     color: #00acb1;
   }
   .modalCardDiv {
-    margin-left: 50px;
+    margin-left: 280px;
   }
   .closeIconModal {
     position: absolute;
@@ -151,6 +178,9 @@ export const ApplicationFormModalStyle = styled.div`
     color: #00acb1;
     font-weight: 400;
     font-size: 16px;
+  }
+  .creditCardRowInputError {
+    border-bottom: 2px solid red;
   }
   .creditCardRowDiv {
     display: flex;

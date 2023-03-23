@@ -5,7 +5,7 @@ export const HomeStyle = styled.div`
 
   .homeBodyContainer {
     width: 100%;
-    max-width: 1650px;
+    max-width: 1200px;
     margin: auto;
   }
 `;

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 
 import { styled } from "@mui/material/styles";
 
 function SwitchButton() {
+  const [dark, setDark] = useState(true);
+  useEffect(() => {
+    console.log("log dark Inside switchButton", dark);
+  }, dark);
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     width: 62,
     height: 34,
@@ -55,7 +59,15 @@ function SwitchButton() {
   return (
     <>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+        control={
+          <MaterialUISwitch
+            onChange={(e) => {
+              setDark(e.target.checked);
+            }}
+            sx={{ m: 1 }}
+            defaultChecked
+          />
+        }
         label="Light Mode"
         labelPlacement="start"
         className="FormControlLabel"

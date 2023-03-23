@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 export const FooterStyle = styled.div`
   margin-top: 200px;
+  padding-bottom: 20px;
   .headerDivFooter {
     display: flex;
     justify-content: space-between;
   }
+  .logoDivFooter img {
+    width: 10vw;
+  }
   .logoDivFooter h5,
   .seconDivHeaderFooter div h5 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 900;
     text-transform: uppercase;
     color: #ffffff;
@@ -33,7 +37,7 @@ export const FooterStyle = styled.div`
     margin-top: 30px;
   }
   .footerMainTxt {
-    width: 1300px;
+    width: 1100px;
     color: #656f77;
     margin-top: 50px;
   }
@@ -41,7 +45,7 @@ export const FooterStyle = styled.div`
   .footerMainTxt,
   .footerLogoLinks,
   .footerLink {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
   }
   .footerRightsTxt {
