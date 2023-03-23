@@ -13,12 +13,10 @@ function AboutCompany() {
   const handleAboutSwitch = () => {
     setAboutCompanySelected(true);
     setCurrenRoundSelected(false);
-    console.log("about clicked");
   };
   const handleCurrentRoundSwitch = () => {
     setAboutCompanySelected(false);
     setCurrenRoundSelected(true);
-    console.log("curren round clicked");
   };
   const MeetTheTeamCard = (props) => {
     return (

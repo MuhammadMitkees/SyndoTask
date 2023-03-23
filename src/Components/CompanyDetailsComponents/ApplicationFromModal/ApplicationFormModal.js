@@ -3,7 +3,7 @@ import { ApplicationFormModalStyle } from "./ApplicationFormModalStyle";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import PaymentIcon from "@mui/icons-material/Payment";
 import { Checkbox, Slider } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CompanyDetailsCard from "../../CompanyDetailsCard/CompanydetalisCard";
 import closeIcon from "../../../images/CompanyDetails/closeIcon.png";
 import { useForm } from "react-hook-form";
@@ -16,6 +16,10 @@ function ApplicationFormModal() {
   const [sliderValue, setSliderValue] = useState(0);
   const [isNameInput, setIsNameInput] = useState(true);
   const [isCreditCard, setIsCreditCard] = useState(false);
+  const navigate = useNavigate();
+  const handlesubmitComplete = () => {
+    navigate("/CompanyDetails");
+  };
   const dispatch = useDispatch();
 
   const handleSliderChange = (e, newValue) => {
@@ -116,7 +120,10 @@ function ApplicationFormModal() {
       resolver: yupResolver(creditCardSchema),
     });
     const handlecreditCardSumbit = () => {
-      console.log("form submitted");
+      alert("form submitted");
+      setTimeout(() => {
+        handlesubmitComplete();
+      }, 3000);
     };
     return (
       <form onSubmit={handleSubmit(handlecreditCardSumbit)}>
