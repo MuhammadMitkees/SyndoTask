@@ -1,3 +1,7 @@
-import { useSelector } from "react-redux";
-
-const { isDark: isDark } = useSelector((state) => state);
+export const Colors = {
+  darkBgColor: "#000000",
+  lightBgColor: "#ffffff",
+  white: "#ffffff",
+  black: "#000000",
+  offWhite: "#FAF9F6",
+};

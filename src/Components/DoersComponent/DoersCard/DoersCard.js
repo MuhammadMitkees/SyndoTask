@@ -1,17 +1,19 @@
 import React from "react";
 import { DoersCardStyle } from "./DoersCardStyle";
-import Person1 from "../../../images/Cards/person1-2x.png";
 import chap from "../../../images/CompanyDetails/”.png";
+import { useSelector } from "react-redux";
 
-function DoersCard() {
+function DoersCard(props) {
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
-    <DoersCardStyle>
+    <DoersCardStyle isDark={isDark}>
       <div className="doersCardLargerImageDiv">
         <div className="doersCardSmallerImageDiv">
-          <img src={Person1} />
+          <img src={props.src} />
           <div>
-            <p>Peter Green</p>
-            <p>Company XYZ - CEO</p>
+            <p>{props.name}</p>
+            <p>{props.position}</p>
           </div>
         </div>
         <img src={chap} />

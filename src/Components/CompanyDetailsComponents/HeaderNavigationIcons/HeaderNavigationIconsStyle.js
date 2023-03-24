@@ -6,15 +6,24 @@ export const HeaderNavigationIconsStyle = styled.div`
     justify-content: flex-end;
     width: 100%;
   }
-  .HeaderIconsDiv button {
-    background-color: transparent;
+  .HeaderIconsDiv > button {
     border: none;
     cursor: pointer;
     margin-left: 15px;
     width: 3vw;
+    background-color: #000000;
+    border-radius: 8px;
+    padding: 5px;
   }
   .HeaderIconsDiv button img {
     width: 1.5vw;
+  }
+  .closeButton {
+    background-color: transparent;
+    border: none;
+  }
+  .closeButton img {
+    width: 15px !important;
   }
   .notificationBox {
     position: absolute;

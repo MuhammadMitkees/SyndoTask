@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CardFooter from "./CardFooter/CardFooter";
 import { CardStyle } from "./CardStyle";
 
 function Card(props) {
+  const { isDark: isDark } = useSelector((state) => state);
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/CompanyDetails");

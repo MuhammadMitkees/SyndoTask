@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const NavbarStyle = styled.div`
-  padding: 67px 10px;
-  /* position: fixed; */
-  /* width: 100%; */
-  max-width: 1250px;
+  width: 100%;
   margin: auto;
+  background: #000001;
 
+  ${(props) =>
+    !props.navbarFixed &&
+    `  opacity: 0.7;
+      position: fixed;
+`}
   h1 {
     color: wheat;
   }
@@ -23,12 +26,16 @@ export const NavbarStyle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 67px 10px;
   }
   .navbarContainer a {
     color: white;
     font-size: 16px;
     font-weight: 900;
   }
+
   .navbarContainerItem {
     width: 30%;
   }

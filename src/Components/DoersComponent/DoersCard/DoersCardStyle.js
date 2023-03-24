@@ -28,11 +28,19 @@ export const DoersCardStyle = styled.div`
     color: #ffffff;
     font-size: 16px;
     font-weight: 900;
+    ${(props) =>
+      !props.isDark &&
+      `    color: black
+`}
   }
   .doersCardSmallerImageDiv p:last-child {
     color: #acb8c2;
     font-size: 16px;
     font-weight: 400;
+    ${(props) =>
+      !props.isDark &&
+      `    color: #000001
+`}
   }
   .mainTxtDoersCard {
     color: #acb8c2;
@@ -40,5 +48,9 @@ export const DoersCardStyle = styled.div`
     font-weight: 400;
     margin-top: 20px;
     padding-bottom: 20px;
+    ${(props) =>
+      !props.isDark &&
+      `    color: #000001
+`}
   }
 `;

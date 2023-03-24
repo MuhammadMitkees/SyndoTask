@@ -5,10 +5,12 @@ import person1 from "../../../images/CompanyDetails/person1.png";
 import person2 from "../../../images/CompanyDetails/person2.png";
 import pitchDeck from "../../../images/CompanyDetails/pitchDeck.png";
 import infoIcon from "../../../images/CompanyDetails/infoIcon.png";
+import { useSelector } from "react-redux";
 
 function AboutCompany() {
   const [aboutCompanySelected, setAboutCompanySelected] = useState(true);
   const [currenRoundSelected, setCurrenRoundSelected] = useState(false);
+  const { isDark: isDark } = useSelector((state) => state);
 
   const handleAboutSwitch = () => {
     setAboutCompanySelected(true);
@@ -48,7 +50,7 @@ function AboutCompany() {
     );
   };
   return (
-    <AboutCompanyStyle>
+    <AboutCompanyStyle isDark={isDark}>
       <div className="mainContainerAboutCompany">
         <div className="firstDivAboutCompany">
           <div className="titledivAboutCompany">

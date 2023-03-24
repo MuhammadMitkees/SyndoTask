@@ -11,11 +11,12 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { hideApplicationModal } from "../../../Redux/DarkModeReducer";
 
 import * as yup from "yup";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 function ApplicationFormModal() {
   const [sliderValue, setSliderValue] = useState(0);
   const [isNameInput, setIsNameInput] = useState(true);
   const [isCreditCard, setIsCreditCard] = useState(false);
+  const { isDark: isDark } = useSelector((state) => state);
   const navigate = useNavigate();
   const handlesubmitComplete = () => {
     navigate("/CompanyDetails");
@@ -197,7 +198,7 @@ function ApplicationFormModal() {
     );
   };
   return (
-    <ApplicationFormModalStyle>
+    <ApplicationFormModalStyle isDark={isDark}>
       <div className="mainDiv">
         <div className="modalIconsDiv">
           <div className="briefCaseIconDiv">

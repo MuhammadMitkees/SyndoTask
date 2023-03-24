@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { Colors } from "../../Colors/Colors";
 export const ComanyDetailsCardStyle = styled.div`
   border-radius: 8px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
+  background-color: black;
   .cardBackGroundDiv {
     max-width: 100%;
     position: relative;
@@ -13,15 +16,22 @@ export const ComanyDetailsCardStyle = styled.div`
     border-bottom: 1px solid #cdd9e3;
     background-color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark && `.companyDetailsDiv{ background-color: ${Colors.black}}`}
   .companyDetailsDiv p {
     color: #656f77;
     font-size: 14px;
     font-weight: 400;
   }
+  ${(props) =>
+    !props.isDark && `.companyDetailsDiv p{ color: ${Colors.offWhite}}`}
   h3 {
     font-size: 24px;
     font-weight: 900;
+    color: black;
   }
+  ${(props) =>
+    !props.isDark && `.companyDetailsDiv h3{ color: ${Colors.white}}`}
   ul {
     list-style-type: none;
     display: flex;
@@ -80,6 +90,7 @@ export const ComanyDetailsCardStyle = styled.div`
     width: 96px;
     left: 31px;
     bottom: 24px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.5);
   }
   .cardBgClassificationContainer {
     width: 180px;
@@ -100,4 +111,8 @@ export const ComanyDetailsCardStyle = styled.div`
   .companyDetailsDivContainer {
     background-color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.carFooterContainer,
+  .companyDetailsDivContainer{ background-color: ${Colors.black}}`}
 `;

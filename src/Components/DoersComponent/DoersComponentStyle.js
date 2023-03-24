@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const DoersComponentStyle = styled.div`
   margin-top: 150px;
   h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 900;
     color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark &&
+    `h2{ color: black}
+`}
   .DoersComponentHeader {
     display: flex;
     justify-content: space-between;
@@ -44,5 +48,6 @@ export const DoersComponentStyle = styled.div`
     color: white;
     margin-left: 10px;
     text-align: right;
+    ${(props) => !props.isDark && `{color : black}`}
   }
 `;

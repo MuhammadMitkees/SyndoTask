@@ -1,11 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import teldaLogo from "../../images/Cards/Telda-logo.png";
 import CardFooter from "../CardsComponent/Card/CardFooter/CardFooter";
 import { ComanyDetailsCardStyle } from "./CompanyDetailsCardStyle";
 
 function CompanyDetailsCard(props) {
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
     <ComanyDetailsCardStyle
+      isDark={isDark}
       style={props.isApplicationform ? { width: "20vw" } : { width: "28vw" }}
     >
       <div className="cardBackGroundDiv">

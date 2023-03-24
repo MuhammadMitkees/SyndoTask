@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../../Colors/Colors";
 
 export const AboutCompanyStyle = styled.div`
   .mainContainerAboutCompany {
@@ -31,10 +32,17 @@ export const AboutCompanyStyle = styled.div`
     color: #ffffff;
     border-bottom: 3px solid #00acb1;
   }
+
   .aboutCompanyNotSelected,
   .currentRoundNotSelected {
     color: #656f77;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.aboutCompanySelected,
+  .currentRoundSelected{
+    color: ${Colors.black}
+  }`}
   .currentRoundSelected,
   .currentRoundNotSelected {
     margin-left: 100px;
@@ -64,6 +72,13 @@ export const AboutCompanyStyle = styled.div`
     font-size: 18px;
     color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.titleDivTxtDiv h3,
+  .meetTheTeamDiv h3,
+  .pitchDeckContainer h3{
+    color: ${Colors.black}
+  }`}
   .meetTheTeamDiv,
   .pitchDeckContainer {
     padding-top: 50px;
@@ -101,6 +116,11 @@ export const AboutCompanyStyle = styled.div`
     font-size: 14px;
     color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.MeetTheTeamCard p, .MeetTheTeamCard h4 {
+    color: ${Colors.black}
+  }`}
   .pitchDeckContainer img {
     margin-top: 25px;
     width: 50vw;
@@ -116,6 +136,11 @@ export const AboutCompanyStyle = styled.div`
     margin-bottom: 35px;
     border-bottom: 1px solid #acb8c2;
   }
+  ${(props) =>
+    !props.isDark &&
+    ` .secDivAboutCompany > h3 {
+    color: ${Colors.black}
+  }`}
   .secDivAboutCompanyRow {
     margin-bottom: 35px;
     padding-right: 20px;
@@ -127,6 +152,11 @@ export const AboutCompanyStyle = styled.div`
     font-size: 16px;
     color: #ffffff;
   }
+  ${(props) =>
+    !props.isDark &&
+    ` .secDivAboutCompanyRow h3 {
+    color: ${Colors.black}
+  }`}
   .secDivAboutCompanyRow div {
     display: flex;
     justify-content: space-between;

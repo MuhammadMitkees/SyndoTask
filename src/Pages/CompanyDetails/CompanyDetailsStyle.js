@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { Colors } from "../../Colors/Colors";
 import BGImage from "../../images/CompanyDetails/BgImage.svg";
 
 export const CompanyDetailsStyle = styled.div`
-  background-color: #000000;
+  background-color: ${(props) => props.bgColor};
+
   .CompanyDetailsMainContainer {
     width: 100%;
     max-width: 1200px;
@@ -11,12 +13,16 @@ export const CompanyDetailsStyle = styled.div`
   .HeaderCompanyDetails {
     display: flex;
     flex-wrap: wrap;
-    background-image: url(${BGImage});
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
   }
-
+  ${(props) =>
+    props.BGImage &&
+    `.HeaderCompanyDetails {
+      background-image: url(${BGImage});
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;     
+     }
+      `}
   .detailsHeaderCompanyDetails {
     display: flex;
     justify-content: space-between;
@@ -36,7 +42,7 @@ export const CompanyDetailsStyle = styled.div`
   .FirstDivLogoAndApply h2 {
     font-size: 40px;
     font-weight: 900;
-    color: #ffffff;
+    color: ${(props) => props.darkWhiteFonts};
     margin-bottom: 10px;
   }
   .FirstDivLogoAndApply p {
@@ -65,6 +71,12 @@ export const CompanyDetailsStyle = styled.div`
     align-items: center;
     border-radius: 3px;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.logoAndApplyLogo{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .5);
+
+  }`}
   .FirstDivLogoAndApply .authenticationIcon {
     width: 35px;
     position: relative;
@@ -97,7 +109,15 @@ export const CompanyDetailsStyle = styled.div`
     margin-top: 120px;
   }
   .SMIconsLinksCompanydetails {
-    margin-right: 15px;
+    margin-right: 2px;
+    background-color: black;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .SMIconsLinksCompanydetails img {
+    margin: auto;
+    top: 5px;
+    position: relative;
   }
   .cardBgClassificationContainer {
     display: flex;

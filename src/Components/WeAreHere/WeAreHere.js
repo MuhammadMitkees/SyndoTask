@@ -1,10 +1,13 @@
 import React from "react";
 import { WeAreHereStyle } from "./weAreHereStyle";
 import weAraHereImage from "../../images/Group1076.png";
+import { useSelector } from "react-redux";
 
 function WeAreHere() {
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
-    <WeAreHereStyle>
+    <WeAreHereStyle isDark={isDark}>
       <div className="weAraHereMainContainer">
         <div className="weAraHereTxtDiv">
           <p>we’re here for you</p>

@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import { Colors } from "../../../Colors/Colors";
 import BGimage from "../../../images/Cards/BackgroundImage.png";
 export const CardStyle = styled.div`
   width: 30%;
   background-color: #ffffff;
   border-radius: 8px;
+  ${(props) =>
+    !props.isDark &&
+    `  background-color: black;
+`}
   .cardBackGroundDiv {
     height: 200px;
     background-image: url(${BGimage});
@@ -19,11 +24,19 @@ export const CardStyle = styled.div`
     margin: auto;
     border-bottom: 1px solid #cdd9e3;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.companyDetailsDiv h3{color: white}  ;
+`}
   .companyDetailsDiv p {
     color: #656f77;
     font-size: 12px;
     font-weight: 400;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.companyDetailsDiv p{color: ${Colors.offWhite}}  ;
+`}
   h3 {
     font-size: 26px;
     font-weight: 900;

@@ -1,6 +1,5 @@
 import React from "react";
 import DarkModeContainer from "../../Components/DarkModeContainer/darkModeContainer";
-import { CompanyDetailsStyle } from "./CompanyDetailsStyle";
 import AuthenticationIcon from "../../images/CompanyDetails/Authenticated.png";
 import CompanyDetailsCard from "../../Components/CompanyDetailsCard/CompanydetalisCard";
 import { Link } from "react-router-dom";
@@ -14,12 +13,21 @@ import ApplicationFormModal from "../../Components/CompanyDetailsComponents/Appl
 import { useDispatch, useSelector } from "react-redux";
 import teldaIcon from "../../images/Cards/Telda-logo.png";
 import { showApplicationModal } from "../../Redux/DarkModeReducer";
+import { CompanyDetailsStyle } from "./CompanyDetailsStyle";
+import { Colors } from "../../Colors/Colors";
 
 function CompanyDetails() {
   const dispatch = useDispatch();
   const { isModalVisible: isModalVisible } = useSelector((state) => state);
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
-    <CompanyDetailsStyle>
+    <CompanyDetailsStyle
+      bgColor={isDark ? Colors.darkBgColor : Colors.lightBgColor}
+      BGImage={isDark}
+      darkWhiteFonts={isDark ? Colors.white : Colors.black}
+      isDark={isDark}
+    >
       {isModalVisible ? (
         <ApplicationFormModal />
       ) : (

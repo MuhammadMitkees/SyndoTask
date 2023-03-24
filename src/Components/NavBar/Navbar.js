@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavbarStyle } from "./NavbarStyle";
 import logoImage from "../../images/SyndoLogo.svg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import DarkModeContainer from "../DarkModeContainer/darkModeContainer";
 
 function Navbar() {
+  const [navbarFixed, setNavbarFixed] = useState(true);
+  const { isDark: isDark } = useSelector((state) => state);
+  window.addEventListener("scroll", () => {
+    setNavbarFixed(false);
+    if (window.scrollY === 0) {
+      setNavbarFixed(true);
+    }
+  });
   return (
-    <NavbarStyle>
+    <NavbarStyle isDark={isDark} navbarFixed={navbarFixed}>
+      <DarkModeContainer />
+
       <div className="navbarContainer">
         <Link to="#" className="imageLogoLink">
           <img

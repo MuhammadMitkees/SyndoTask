@@ -2,10 +2,13 @@ import React from "react";
 import { FooterStyle } from "./FooterStyle";
 import SyndoLogo from "../../images/SyndoLogo.svg";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Footer() {
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
-    <FooterStyle>
+    <FooterStyle isDark={isDark}>
       <div className="headerDivFooter">
         <div className="logoDivFooter">
           <img src={SyndoLogo} />

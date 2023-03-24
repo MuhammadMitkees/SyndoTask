@@ -7,6 +7,7 @@ import closeIcon from "../../../images/CompanyDetails/closeIcon.png";
 
 function HeaderNavigationIcons() {
   const [notificationClicked, setNotificationClicked] = useState(false);
+
   const handleIconClick = () => {
     setNotificationClicked(!notificationClicked);
   };
@@ -45,7 +46,7 @@ function HeaderNavigationIcons() {
         }
       >
         <p>{props.title}</p>
-        <button>
+        <button className="closeButton">
           <img src={closeIcon} />
         </button>
       </div>

@@ -20,6 +20,11 @@ export const WeAreHereStyle = styled.div`
     color: #ffffff;
     font-weight: 900;
   }
+  ${(props) =>
+    !props.isDark &&
+    `.weAraHereTxtDiv h2{
+    color: black
+  }`}
   .weAraHereSecondTxt {
     color: #656f77;
     font-size: 30px;

@@ -5,6 +5,10 @@ export const ApplicationFormModalStyle = styled.div`
   height: 100%;
   z-index: 100;
   background: #000000;
+  ${(props) =>
+    !props.isDark &&
+    `  background: white;
+`}
   .mainDiv {
     display: flex;
     align-items: center;
@@ -24,6 +28,10 @@ export const ApplicationFormModalStyle = styled.div`
   .briefCaseIcon,
   .paymentIcon {
     color: #acb8c2;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .briefCaseIconSelected,
   .paymentIconSelected {
@@ -37,6 +45,10 @@ export const ApplicationFormModalStyle = styled.div`
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 30px;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .briefCaseIconDiv {
     text-align: center;
@@ -48,13 +60,17 @@ export const ApplicationFormModalStyle = styled.div`
     text-align: center;
   }
   .applicationFormDiv {
-    width: 25%;
+    width: 30%;
     margin-left: 90px;
   }
   .applicationFormDiv > h3 {
     font-weight: 900;
     font-size: 24px;
     color: #ffffff;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .slider {
     color: #00acb1;
@@ -65,6 +81,10 @@ export const ApplicationFormModalStyle = styled.div`
     color: #ffffff;
     display: block;
     margin-bottom: 20px;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .inputAndError {
     position: relative;
@@ -105,6 +125,10 @@ export const ApplicationFormModalStyle = styled.div`
   }
   .sliderLabelDiv p:last-child {
     color: #ffffff;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .sliderLabelDiv {
     display: flex;
@@ -115,12 +139,20 @@ export const ApplicationFormModalStyle = styled.div`
     font-weight: 900;
     font-size: 16px;
     color: #ffffff;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .disclaimerTxt,
   .termsTxt {
     font-weight: 400;
     font-size: 16px;
     color: #ffffff;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
   }
   .termsTxt {
     display: inline-block;
@@ -139,7 +171,7 @@ export const ApplicationFormModalStyle = styled.div`
     color: #00acb1;
   }
   .modalCardDiv {
-    margin-left: 280px;
+    margin-left: 200px;
   }
   .closeIconModal {
     position: absolute;
@@ -157,6 +189,10 @@ export const ApplicationFormModalStyle = styled.div`
     font-weight: 700;
     font-size: 18px;
     color: #ffffff;
+    ${(props) =>
+      !props.isDark &&
+      `  color: black;
+`}
     display: block;
     width: 100%;
   }

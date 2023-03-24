@@ -7,10 +7,12 @@ import NumberComponent from "../../Components/NumbersComponent/NumberComponent";
 import DoersComponent from "../../Components/DoersComponent/DoersComponent";
 import Footer from "../../Components/Footer/Footer";
 import { HomeStyle } from "./HomeStyle";
+import { useSelector } from "react-redux";
 function Home() {
+  const { isDark: isDark } = useSelector((state) => state);
+
   return (
-    <HomeStyle>
-      <DarkModeContainer />
+    <HomeStyle isDark={isDark}>
       <Navbar />
       <div className="homeBodyContainer">
         <WeAreHere />
