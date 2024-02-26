@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WeAreHereStyle = styled.div`
+export const WeAreHereStyle = styled.section`
   padding: 40px 0;
   .weAraHereMainContainer {
     display: flex;

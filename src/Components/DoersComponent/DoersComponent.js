@@ -8,7 +8,7 @@ import person3 from "../../images/Cards/person3-2x.png";
 function DoersComponent() {
   const { isDark: isDark } = useSelector((state) => state);
   return (
-    <DoersComponentStyle isDark={isDark}>
+    <DoersComponentStyle id="testimonialsSection" isDark={isDark}>
       <div className="DoersComponentHeader">
         <h2>Hear It from Our Doers</h2>
         <ul className="sliderControlsDoersComp">

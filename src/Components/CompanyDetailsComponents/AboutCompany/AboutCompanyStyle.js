@@ -101,6 +101,12 @@ export const AboutCompanyStyle = styled.div`
     align-items: center;
     margin-right: 5vw;
   }
+  .MeetTheTeamCard img {
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
   .MeetTheTeamCards {
     justify-content: flex-start;
     margin-top: 30px;
