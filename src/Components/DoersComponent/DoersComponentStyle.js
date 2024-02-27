@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DoersComponentStyle = styled.div`
+export const DoersComponentStyle = styled.section`
   margin-top: 150px;
   h2 {
     font-size: 40px;

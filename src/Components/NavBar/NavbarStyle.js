@@ -4,6 +4,7 @@ export const NavbarStyle = styled.div`
   width: 100%;
   margin: auto;
   background: #000001;
+  z-index: 100;
 
   ${(props) =>
     !props.navbarFixed &&
@@ -36,7 +37,7 @@ export const NavbarStyle = styled.div`
     font-weight: 900;
   }
   .activeNavItem {
-    color: yellow;
+    color: yellow !important;
   }
   .navbarContainerItem {
     width: 30%;

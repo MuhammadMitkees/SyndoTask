@@ -8,6 +8,13 @@ function Navbar() {
   const [navbarFixed, setNavbarFixed] = useState(true);
   const [activeSection, setActiveSection] = useState("");
   const { isDark: isDark } = useSelector((state) => state);
+  const handleNavClick = (event, sectionId) => {
+    event.preventDefault(); // Prevent default anchor link behavior
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   window.addEventListener("scroll", () => {
     setNavbarFixed(false);
     if (window.scrollY === 0) {
@@ -24,15 +31,17 @@ function Navbar() {
         });
       },
       { threshold: 0.5 }
-    ); // Adjust threshold as needed
+    );
 
-    // Observing each section
     document.querySelectorAll("section").forEach((section) => {
       observer.observe(section);
     });
 
     return () => observer.disconnect(); // Cleanup observer on component unmount
-  }, []);
+  }, [activeSection]);
+  useEffect(() => {
+    console.log("activeSection logg", activeSection);
+  }, [activeSection]);
   return (
     <NavbarStyle
       activeSection={activeSection}
@@ -42,7 +51,11 @@ function Navbar() {
       <DarkModeContainer />
 
       <div className="navbarContainer">
-        <a href="#weAraHereSection" className="imageLogoLink">
+        <a
+          onClick={(e) => handleNavClick(e, "weAraHereSection")}
+          href="#weAraHereSection"
+          className="imageLogoLink"
+        >
           <img
             src={logoImage}
             className="navbarContainerItem"
@@ -52,18 +65,21 @@ function Navbar() {
         </a>
         <div className="navbarContainerItem">
           <a
+            onClick={(e) => handleNavClick(e, "exploreSection")}
             className={activeSection === "exploreSection" && "activeNavItem"}
             href="#exploreSection"
           >
             Explore
           </a>
           <a
+            onClick={(e) => handleNavClick(e, "proofSection")}
             className={activeSection === "proofSection" && "activeNavItem"}
             href="#proofSection"
           >
             Proof
           </a>
           <a
+            onClick={(e) => handleNavClick(e, "testimonialsSection")}
             className={
               activeSection === "testimonialsSection" && "activeNavItem"
             }
