@@ -7,7 +7,7 @@ function ExploreContainer() {
   const { isDark: isDark } = useSelector((state) => state);
 
   return (
-    <ExploreContainerStyle isDark={isDark}>
+    <ExploreContainerStyle id="exploreSection" isDark={isDark}>
       <h2>Explore Current Rounds</h2>
       <AllCards />
     </ExploreContainerStyle>

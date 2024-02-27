@@ -7,7 +7,7 @@ function NumberComponent() {
   const { isDark: isDark } = useSelector((state) => state);
 
   return (
-    <NumberComponentStyle isDark={isDark}>
+    <NumberComponentStyle id="proofSection" isDark={isDark}>
       <h2>Let’s talk numbers!</h2>
       <div className="NumbersCardsDiv">
         <NumbersCard />

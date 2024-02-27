@@ -7,7 +7,7 @@ function WeAreHere() {
   const { isDark: isDark } = useSelector((state) => state);
 
   return (
-    <WeAreHereStyle isDark={isDark}>
+    <WeAreHereStyle id="weAraHereSection" isDark={isDark}>
       <div className="weAraHereMainContainer">
         <div className="weAraHereTxtDiv">
           <p>we’re here for you</p>

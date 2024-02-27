@@ -4,6 +4,7 @@ export const NavbarStyle = styled.div`
   width: 100%;
   margin: auto;
   background: #000001;
+  z-index: 100;
 
   ${(props) =>
     !props.navbarFixed &&
@@ -35,9 +36,14 @@ export const NavbarStyle = styled.div`
     font-size: 16px;
     font-weight: 900;
   }
-
+  .activeNavItem {
+    color: yellow !important;
+  }
   .navbarContainerItem {
     width: 30%;
+  }
+  .navbarContainerItem a {
+    text-decoration: none;
   }
   .navbarContainerItem:nth-child(2) a:nth-child(2) {
     margin-right: 100px;
