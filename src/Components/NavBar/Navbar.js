@@ -9,11 +9,20 @@ function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const { isDark: isDark } = useSelector((state) => state);
   const handleNavClick = (event, sectionId) => {
-    event.preventDefault(); // Prevent default anchor link behavior
+    event.preventDefault(); // Prevent default anchor behavior
+    const navbar = document.querySelector("#navbarStyleContain");
+    const navbarHeight = navbar ? navbar.offsetHeight : 0; // Get navbar's current height
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const sectionTop = section.offsetTop - navbarHeight; // Calculate section's top position minus navbar height
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
     }
+    setTimeout(() => {
+      setActiveSection(sectionId);
+    }, 100);
   };
   window.addEventListener("scroll", () => {
     setNavbarFixed(false);
@@ -22,15 +31,26 @@ function Navbar() {
     }
   });
   useEffect(() => {
+    const navbar = document.querySelector("#navbarStyleContain");
+    const navbarHeight = navbar ? `${navbar.offsetHeight}px` : "0px";
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        let activeId;
+        for (const entry of entries) {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            activeId = entry.target.id;
+            // Break the loop if we find a fully visible section
+            if (entry.intersectionRatio >= 0.5) {
+              break;
+            }
           }
-        });
+        }
+        setActiveSection(activeId);
       },
-      { threshold: 0.5 }
+      {
+        threshold: [0, 0.5, 1], // Callback will be invoked when 0%, 50%, and 100% of target's visibility changes
+      },
+      { rootMargin: `-${navbarHeight} 0px 0px 0px` }
     );
 
     document.querySelectorAll("section").forEach((section) => {
@@ -42,11 +62,13 @@ function Navbar() {
   useEffect(() => {
     console.log("activeSection logg", activeSection);
   }, [activeSection]);
+
   return (
     <NavbarStyle
       activeSection={activeSection}
       isDark={isDark}
       navbarFixed={navbarFixed}
+      id="navbarStyleContain"
     >
       <DarkModeContainer />
 
