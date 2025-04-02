@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/SyndoTask/static/css/main.d2db9404.css",
+    "main.js": "/SyndoTask/static/js/main.77b01789.js",
+    "static/js/787.72c3f6cd.chunk.js": "/SyndoTask/static/js/787.72c3f6cd.chunk.js",
+    "static/media/BgImage.svg": "/SyndoTask/static/media/BgImage.ad52da709471cd5524988a271379d684.svg",
+    "static/media/pitchDeck.png": "/SyndoTask/static/media/pitchDeck.fdaae96c0b7b6ca4c459.png",
+    "static/media/BackgroundImage.png": "/SyndoTask/static/media/BackgroundImage.359406cdcadab0f24a73.png",
+    "static/media/Group1076.png": "/SyndoTask/static/media/Group1076.581c35ce03a4d37cbf60.png",
+    "static/media/Roboto-Regular.ttf": "/SyndoTask/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/person2.png": "/SyndoTask/static/media/person2.e9a861e9ef1026174009.png",
+    "static/media/person1.png": "/SyndoTask/static/media/person1.6d0d3af18983e3d3f5fd.png",
+    "static/media/person2-2x.png": "/SyndoTask/static/media/person2-2x.006fcc2c6685d911808a.png",
+    "static/media/person1-2x.png": "/SyndoTask/static/media/person1-2x.3f7c57c785afcd795cbe.png",
+    "static/media/person3-2x.png": "/SyndoTask/static/media/person3-2x.23de6b53358eb35d55c9.png",
+    "static/media/SyndoLogo.svg": "/SyndoTask/static/media/SyndoLogo.1eadb6bcf9da295d94fd07fd8520a7ab.svg",
+    "index.html": "/SyndoTask/index.html",
+    "main.d2db9404.css.map": "/SyndoTask/static/css/main.d2db9404.css.map",
+    "main.77b01789.js.map": "/SyndoTask/static/js/main.77b01789.js.map",
+    "787.72c3f6cd.chunk.js.map": "/SyndoTask/static/js/787.72c3f6cd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2db9404.css",
+    "static/js/main.77b01789.js"
+  ]
+}
